@@ -18,12 +18,7 @@ import webapp2
 from pata import PataHandler
 #from transit import TransitHandler
 
-class SayHandler(webapp2.RequestHandler):
-    def get(self):
-        self.response.write('Say hello!')
-
 app = webapp2.WSGIApplication([
     ('/pata', PataHandler),
-    ('/say', SayHandler),
     #('/', TransitHandler)
 ], debug=True)
